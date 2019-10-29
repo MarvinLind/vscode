@@ -23,7 +23,6 @@ spec:
 					sh '''
 					yarn
 					yarn compile
-					sh './scripts/test.sh'
 					'''
         }
       }
