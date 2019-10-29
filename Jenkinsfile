@@ -21,7 +21,7 @@ spec:
       steps {
         container('yarn-build') {
 					sh '''
-					apt-get update && apt-get install -y gulp
+					npm install -g gulp
 					yarn
 					yarn compile
 					'''
