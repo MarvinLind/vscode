@@ -9,7 +9,7 @@ kind: Pod
 spec:
   containers:
   - name: yarn-build
-    image: jlarfors/vscode:latest
+    image: marvinlind/vscode-gulp
     command:
     - cat
     tty: true
