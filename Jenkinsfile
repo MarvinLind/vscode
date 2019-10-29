@@ -27,10 +27,10 @@ spec:
         }
       }
     }
-		stage('Test') {
+		stage('Package') {
       steps {
         container('yarn-build') {
-					sh './scripts/test.sh'
+					sh 'gulp vscode-linux-x64'
         }
       }
     }
