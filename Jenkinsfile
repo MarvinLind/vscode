@@ -21,6 +21,7 @@ spec:
       steps {
         container('yarn-build') {
 					sh '''
+					apt-get update && apt-get install -y gulp
 					yarn
 					yarn compile
 					'''
@@ -29,7 +30,7 @@ spec:
     }
 		stage('Package') {
       steps {
-        container('gulp-build') {
+        container('gulp') {
 					sh 'gulp vscode-linux-x64'
         }
       }
