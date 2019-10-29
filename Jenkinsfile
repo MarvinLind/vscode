@@ -23,7 +23,15 @@ spec:
 					sh '''
 					yarn
 					yarn compile
+					sh './scripts/test.sh'
 					'''
+        }
+      }
+    }
+		stage('Test') {
+      steps {
+        container('yarn-build') {
+					sh './scripts/test.sh'
         }
       }
     }
